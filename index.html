@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 업로드</title>
+    <!-- 부트스트랩 CSS 링크 추가 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>이미지 업로드</h1>
+      <!-- 이미지 선택을 위한 input file (multiple 속성 추가) -->
+      <div class="form-group">
+        <label for="imageInput">이미지 선택:</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="imageInput"
+          accept="image/*"
+          multiple
+        />
+      </div>
+      <!-- 공사현장 선택을 위한 select box -->
+      <div class="form-group">
+        <label for="constructionSite">공사현장:</label>
+        <select class="form-control" id="constructionSite">
+          <option value="현장 1">현장 1</option>
+          <option value="현장 2">현장 2</option>
+          <option value="현장 3">현장 3</option>
+          <!-- 필요한 현장을 추가할 수 있습니다. -->
+        </select>
+      </div>
+      <!-- 날짜 선택을 위한 input 태그 -->
+      <div class="form-group">
+        <label for="datePicker">날짜 선택:</label>
+        <input type="date" class="form-control" id="datePicker" />
+      </div>
+      <!-- 이미지 업로드 버튼 -->
+      <button type="button" class="btn btn-primary" onclick="uploadImages()">
+        업로드
+      </button>
+      <!-- 사진 다운로드 버튼 -->
+      <button type="button" class="btn btn-success" onclick="downloadImages()">
+        다운로드
+      </button>
+    </div>
+
+    <!-- 부트스트랩 JavaScript 링크 추가 (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 사용자 정의 JavaScript 파일 (아래 코드를 script.js에 저장) -->
+    <script src="./script.js"></script>
+  </body>
+</html>
